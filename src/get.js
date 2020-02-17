@@ -9,9 +9,9 @@ const getPage = async (browser, target, domain) => {
   //     path: `puppeteer/img/${target.name}.png`,
   //     fullpage: true
   // });
-  console.log("url: " + protocol + domain + target.path);
-  console.log("status_code: " + response._status);
-  console.log("end.");
+  console.log(target.name + " url: " + protocol + domain + target.path);
+  console.log(target.name + " status_code: " + response._status);
+  console.log(target.name + " end.");
   await page.close();
 }
 
