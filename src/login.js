@@ -8,7 +8,7 @@ const login = async (browser, loginInfo) => {
 
   await page.type('input[name="user[email]"]', loginInfo.user.email);
   await page.type('input[name="user[password]"]', loginInfo.user.pass);
-  page.click(loginInfo.button);
+  page.click('input[type="submit"]');
 
   await page.waitForNavigation();
   await page.screenshot({
